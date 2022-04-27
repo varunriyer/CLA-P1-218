@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main() {
+
+    int seconds,minutes,hours,days;
+    scanf("%d",&seconds);
+    days = seconds/(60*60*24);
+    hours = (seconds - (days*60*60*24))/(60*60);
+    minutes = (seconds - (days*60*60*24)-(hours*60*60))/60;
+    seconds = (seconds - (days*60*60*24)-(hours*60*60)-(minutes*60));
+    printf("The Duration is %d days %d hours %d minutes %d seconds",days,hours,minutes,seconds);
+    return 0;
+}
